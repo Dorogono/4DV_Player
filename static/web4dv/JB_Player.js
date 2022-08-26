@@ -71,8 +71,8 @@ export default class JB_Player {
     playURL() {
         let model = new WEB4DS('mainModel', this.urlD, this.urlM, null, this.position, renderer, scene, camera)
 
-        model.load(true, false)
-        model.keepsChunksInCache(true)
+        model.load(true, false) // waiter 이미지 보여주기, 플레이하면서 로딩하기
+        model.keepsChunksInCache(true) // 첫 로드할 때, 모든 frame 저장하기
 
         return model
     }
