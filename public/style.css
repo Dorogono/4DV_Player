@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1a1e2f;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loading {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    display: none;
+}
+.badge-3d{
+    color: #fff;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.75);
+    font-size: 40px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+.playBtn {
+    font-size: 100px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -50px;
+    cursor: pointer;
+}
+
+.btns {
+    color: black;
+}
+
+.bot{
+    display: flex;
+    align-items: center;
+    height: 5%;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ppBtn {
+    position: relative;
+    left: 20px;
+    bottom: -7px;
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.bot {
+    display: flex;
+    align-items: center;
+}
+
+.time{
+    color: black;
+    position: absolute;
+    font-size: 12px;
+    bottom: 17px;
+    right: 17px;
+    width: 75px;
+    display: none;
+}
+
+.time-bar {
+    background: #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    right: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+}
+
+.time-bar-stick{
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.2s linear;
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+}
+
+.time-bar-stick::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.time-bar-stick::-webkit-slider-runnable-track {
+    background: rgb(83, 83, 83);
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 7px;
+    right: 2px;
+}

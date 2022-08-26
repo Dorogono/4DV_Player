@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="#">
+    <style>
+        /* Font */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+        /* Player Size, Position Setting */
+        #D3container{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            overflow: hidden;
+        }
+    </style>
+   <title>JB_Player</title>
+</head>
+<body>
+    <!-- WEB 4DV Player -->
+    <div id="D3container">
+        <i class="bi bi-badge-3d-fill badge-3d"></i>
+        <canvas id="canvas4D"></canvas>
+
+        <!-- Initial Load Button -->
+        <i class="bi bi-play-fill playBtn btns" id="playBtn"></i>
+
+        <div class="bot">
+            <!-- Play & Pause Button Wrap -->
+            <i class="bi bi-pause ppBtn btns"></i>
+
+            <div class="time-bar" id="time-bar">
+                <input type="range" class="time-bar-stick" id="time-bar-stick" max="100" min="0" value="0" step="0.1">
+            </div>
+
+            <!-- Show Time -->
+            <div class="time" id="time">
+                <span id="current">00:00</span>
+                <span>/</span>
+                <span id="total">00:00</span>
+            </div>
+        </div>
+
+        <!-- Loading Image -->
+        <img src="/static/web4dv/waiter/waiter.svg" class="loading">
+
+    </div>
+
+    <!-- LIB: THREEJS for Player -->
+    <script src="/static/threejs/three.js"></script>
+    <script src="/static/threejs/OrbitControls.js"></script>
+
+    <!-- Player Setting Script -->
+    <script type="module" src="/public/player-controller.js"></script>
+</body>
+</html>
