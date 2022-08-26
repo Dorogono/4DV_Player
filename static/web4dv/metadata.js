@@ -2,6 +2,9 @@ import ResourceManagerXHR from "./web4dvResource.js";
 
 /**
  * Metadata Class
+ * @params url:string;
+ * @params json:boolean;
+ * @params cb:function
  */
 export default class MetaData {
     constructor(url, json, cb) {
@@ -20,6 +23,8 @@ export default class MetaData {
             // data components
             const frameRate = Math.ceil(info.FrameRate)
             const totalFrame = info.NbFrames
+            // pointerToTrackIndex: 오디오 포함 파일의 사이즈
+            // pointerToBlocIndex: 오디오 미포함 파일의 사이즈
             const size = resource._pointerToTrackIndex !== 0 ? resource._pointerToTrackIndex : resource._pointerToBlocIndex
 
             // time data components
